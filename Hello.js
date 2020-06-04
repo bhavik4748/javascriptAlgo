@@ -1,6 +1,6 @@
 
 export const testFunc = () => {
-    console.log('Hello function');
+    console.log('Hello11 function');
 }
 
 
