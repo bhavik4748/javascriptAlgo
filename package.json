@@ -8,5 +8,11 @@
   },
   "author": "Bhavik Gosrani",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "node": "^14.4.0"
+  }
 }
