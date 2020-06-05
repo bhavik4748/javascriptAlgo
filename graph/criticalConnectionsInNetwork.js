@@ -1,6 +1,16 @@
 import Graph from './graph.js';
+//var Graph = require("./graph.js");
+/*
+1192. Critical Connections in a Network
 
+Share
+There are n servers numbered from 0 to n-1 connected by undirected server-to-server connections forming a network where connections[i] = [a, b] represents a connection between servers a and b. Any server can reach any other server directly or indirectly through the network.
 
+A critical connection is a connection that, if removed, will make some server unable to reach some other server.
+
+Return all critical connections in the network in any order.
+
+*/
 /**
  * @param {number} n
  * @param {number[][]} connections
@@ -12,14 +22,12 @@ const criticalConnections = function (n, connections) {
     for (let i = 0; i < n; i++) {
         g.addVertex(i);
     }
-    //console.log('noofvertices', g.getNoOfVertices(), g.getAdjacencyList());
     for (let i = 0; i < connections.length; i++) {
         g.addEdges(+`${connections[i][0]}`, +`${connections[i][1]}`);
     }
-    g.printGraph();
+   // g.printGraph();
 
     const graph = createGraph(n, connections);
-    console.log(graph);
     const visited = {}, low = {};
     // return helper(graph, 0, null, 0, visited, low);
     return helper(g, 0, null, 0, visited, low);
@@ -31,7 +39,6 @@ function helper(graph, u, pre, rank, visited, low, output = []) {
     visited[u] = rank;
     low[u] = rank;
     const list = graph.getAdjacencyList(u);
-    console.log('list', list, u);
     for (const v of list) {
         if (v === pre) continue;
         helper(graph, v, u, rank + 1, visited, low, output);

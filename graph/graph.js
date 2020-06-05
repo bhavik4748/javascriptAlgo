@@ -19,7 +19,7 @@ class Graph {
         return vMap;
     }
 
-    getAdjacencyList() {
+    getEntireAdjacencyList() {
         return this.AdjacencyList.keys();
     }
 
@@ -42,7 +42,7 @@ class Graph {
     }
 }
 export default Graph;
-
+//module.exports = { Graph }
 /*
 let g = new Graph(6);
 let vertices = ['A', 'B', 'C', 'D', 'E', 'F'];
