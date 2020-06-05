@@ -1,6 +1,7 @@
 
 import { testFunc } from './Hello.js';
 import { reverseString } from './string/index.js';
+import { continousArray } from './hashtable/Index.js'
 
 testFunc();
 
