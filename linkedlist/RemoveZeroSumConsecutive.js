@@ -55,8 +55,8 @@ const removeZeroSumSublists = function (head) {
 
 
 const main = () => {
-     let m = [1, 2, -3, 3, 1];
-  //  let m = [1, 2, 3, -3, 4]
+  //   let m = [1, 2, -3, 3, 1];
+    let m = [1, 2, 3, -3, 4]
     let head = new ListNode(m[0]);
     let prev = head;
     for (let i = 1; i < m.length; i++) {
